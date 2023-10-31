@@ -111,11 +111,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  let a = testArray[0];
+  let b = testArray[1];
+  let c = testArray[2];
+  let multiplyAB = multiply(a,b)[0];
+  let multiplyABC = multiply(multiplyAB, c)[0];
+  let strArr = `The numbers ${a},${b},${c} have a product of ${multiplyABC}.`;
+
+  return [multiplyABC, strArr]
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
